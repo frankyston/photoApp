@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Listagem - PhotoApp</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor= "let item of items" (click)="itemTapped($event, item)">
+      <ion-card padding>
+        <ion-grid>
+          <ion-row>
+            <ion-col width-33>
+              <img src="{{item.img}}">
+            </ion-col>
+            <ion-col width-50>
+              <h2>{{item.name}}</h2>
+              <p>{{item.city}}</p>
+              <p>{{item.datetime}}</p>
+            </ion-col>
+            <ion-col width-10>
+              <button ion-button clear item-right>
+                <ion-icon name="ios-camera"></ion-icon>
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+    </button>
+  </ion-list>
+</ion-content>
