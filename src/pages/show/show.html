@@ -17,29 +17,26 @@
 <ion-content class="card-background-page">
 
   <ion-card>
-    <img src="{{selectedItem.img}}"/>
+    <img src="{{selectedItem.photo}}"/>
   </ion-card>
   <ion-grid>
     <ion-row>
       <ion-col width-100>
         <ion-item>
           <h1>
-            {{selectedItem.name}}
+            {{selectedItem.city}}
           </h1>
         </ion-item>
         <ion-item>
           <p>
-            {{selectedItem.city}}
+            {{selectedItem.lat}},{{selectedItem.long}}
           </p>
         </ion-item>
         <ion-item>
           <p>
-            {{selectedItem.datetime}}
+            {{selectedItem.day | date: 'dd/MM/yyyy, H:m:s'}}
           </p>
         </ion-item>
-        <p padding>
-          {{selectedItem.description}}
-        </p>
       </ion-col>
     </ion-row>
   </ion-grid>
